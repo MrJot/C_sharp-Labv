@@ -1,0 +1,6 @@
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\bin\Debug\juszkiew_ConsoleApplication.exe.config
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\bin\Debug\juszkiew_ConsoleApplication.exe
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\bin\Debug\juszkiew_ConsoleApplication.pdb
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\obj\Debug\juszkiew_ConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\obj\Debug\juszkiew_ConsoleApplication.exe
+C:\Users\student\Desktop\juszkiew\juszkiew_ConsoleApplication\juszkiew_ConsoleApplication\obj\Debug\juszkiew_ConsoleApplication.pdb
