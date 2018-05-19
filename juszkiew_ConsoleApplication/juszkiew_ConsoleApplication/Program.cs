@@ -10,7 +10,165 @@ namespace juszkiew_ConsoleApplication
     {
         static void Main(string[] args)
         {
-            
+
+
+            List<int> rawList = new List<int>();
+            List<int> conditionalList = new List<int>();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Podaj liczbe:");
+                rawList.Add(int.Parse(Console.ReadLine()));
+            }
+            rawList.ForEach(Console.Write);
+
+            foreach(var i in rawList){
+                if (i <= 2)
+                {
+                    rawList.Remove(i);
+                }
+            }
+
+            rawList.ForEach(Console.Write);
+       
+            Console.ReadKey();
+        }
+
+        private static void SortowanieWstawianieCalosc()
+        {
+            try
+            {
+                Console.WriteLine("Podaj rozmiar tablicy:");
+                int rozmiarTablicy = int.Parse(Console.ReadLine());
+                Console.WriteLine("Podaj gorny limit tablicy:");
+                int gornyLimit = int.Parse(Console.ReadLine());
+
+                int[] table = inicializacjaTablicy(rozmiarTablicy, gornyLimit);
+                drukowanieTablicy(table);
+                Console.WriteLine("Po sortowaniu....\n");
+                drukowanieTablicy(sortowanieWstawianie(table));
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Nieprawidlowy format danych !");
+                Console.ReadKey();
+            }
+        }
+
+        public static int[] sortowanieWstawianie(int[] tableToSort)
+        {
+            {
+                for (int i = 0; i < tableToSort.Length - 1; i++)
+                {
+                    int j = i + 1;
+
+                    while (j > 0)
+                    {
+                        if (tableToSort[j - 1] > tableToSort[j])
+                        {
+                            int temp = tableToSort[j - 1];
+                            tableToSort[j - 1] = tableToSort[j];
+                            tableToSort[j] = temp;
+
+                        }
+                        j--;
+                    }
+                }
+                return tableToSort;
+            }
+
+
+        }
+
+
+        private static void Cwiczenie7SortowanieBabelkowe()
+        {
+            try
+            {
+                Console.WriteLine("Podaj rozmiar tablicy:");
+                int rozmiarTablicy = int.Parse(Console.ReadLine());
+                Console.WriteLine("Podaj gorny limit tablicy:");
+                int gornyLimit = int.Parse(Console.ReadLine());
+
+                int[] table = inicializacjaTablicy(rozmiarTablicy, gornyLimit);
+                drukowanieTablicy(table);
+                Console.WriteLine("Po sortowaniu....\n");
+                drukowanieTablicy(sortowanieBabelkowe(table));
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Nieprawidlowy format danych !");
+                Console.ReadKey();
+            }
+        }
+
+        public static int[] sortowanieBabelkowe(int[] tableToSort)
+        {
+            for (int i = 0; i < tableToSort.Length; i++)
+            {
+                for (int j = 0; j < tableToSort.Length - 1; j++)
+                {
+                    if (tableToSort[j] > tableToSort[j + 1])
+                    {
+                        int temp;
+                        temp = tableToSort[j + 1];
+                        tableToSort[j + 1] = tableToSort[j];
+                        tableToSort[j] = temp;
+                    }
+                }
+            }
+
+            return tableToSort;
+
+        }
+
+        public static void drukowanieTablicy(int[] table)
+        {
+            foreach (var i in table)
+            {
+                Console.Write(i + ",");
+            }
+            Console.WriteLine("\n");
+        }
+
+        public static int[] inicializacjaTablicy(int rozmiarTablicy, int gornyLimit)
+        {
+      
+                int[] table = new int[rozmiarTablicy];
+                Random rand = new Random();
+                for (int i = 0; i < table.Length; i++)
+                {
+                    table[i] = rand.Next(1, gornyLimit);
+                }
+                return table;
+        
+        }
+
+        private static void CwiczenieNr6()
+        {
+            Console.WriteLine("Podaj rozmiar tablicy");
+            int rozmiarTablicy = int.Parse(Console.ReadLine());
+            int[] table = new int[rozmiarTablicy];
+            Console.WriteLine("Podaj gorny limit wartości w tablicy ");
+            int gornyLimit = int.Parse(Console.ReadLine());
+            Random rand = new Random();
+            for (int i = 0; i < table.Length; i++)
+            {
+                table[i] = rand.Next(1, gornyLimit);
+            }
+
+
+            Console.WriteLine("Twoja tablica: ");
+
+            foreach (var i in table)
+            {
+                Console.Write(i + ",");
+            }
+
+
+            Console.ReadKey();
         }
 
         private static void CwiczeniePiatePunktTrzeci()
